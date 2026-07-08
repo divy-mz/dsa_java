@@ -13,6 +13,7 @@ class Solution {
             write++;
             if(count>1){
             String countStr=String.valueOf(count);
+            
             for(char digit:countStr.toCharArray()){
                 chars[write]=digit;
                 write++;
