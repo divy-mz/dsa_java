@@ -15,7 +15,7 @@ public class Solution {
         ListNode b=headB;
         int aLen=0;
         int bLen=0;
-        int diff;
+       //int diff;
         while(a!=null){
             aLen++;
             a=a.next;
@@ -25,13 +25,13 @@ public class Solution {
             b=b.next;
         }
         if(aLen>bLen){
-            diff=aLen-bLen;
+            int diff=aLen-bLen;
             while(diff-->0){
                 headA=headA.next;
             }
         }
         else{
-            diff=bLen-aLen;
+           int diff=bLen-aLen;
             while(diff-->0){
                 headB=headB.next;
             }
