@@ -4,21 +4,20 @@ class Solution {
             return true;
         }
         int max=0;
-        for(int i=0;i<nums.length;i++){
-             if (i > max) {
-                return false;
-            }
+        int i=0;
+        while(i<=max){
             if(i+nums[i]>max){
                 max=i+nums[i];
             }
-        }
+        
         if(max>=nums.length-1){
             return true;
         }
-        else{
+        i++;
+        }
+        
             return false;
         }
        
         
     }
-}
