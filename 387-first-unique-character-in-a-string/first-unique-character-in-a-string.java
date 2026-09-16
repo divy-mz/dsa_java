@@ -14,7 +14,6 @@ class Solution {
         if(ans=='\0'){
             return -1;
         }
-        int idx=s.indexOf(ans);
-        return idx;
+        return s.indexOf(ans);
     }
 }
