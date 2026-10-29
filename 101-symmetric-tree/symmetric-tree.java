@@ -14,19 +14,17 @@
  * }
  */
 class Solution {
-    public static boolean same(TreeNode p,TreeNode q){
-        if(p==null && q==null) return true;
+    public static boolean sameTree(TreeNode p,TreeNode q){
+        if(p==null && q==null ) return true;
         if(p==null || q==null) return false;
         if(p.val!=q.val) return false;
-        if(!same(p.left , q.right)) return false;
-        if(!same(p.right , q.left)) return false;
+        if(!sameTree(p.left,q.right)) return false;
+        if(!sameTree(p.right,q.left)) return false;
         return true;
-
     }
     public boolean isSymmetric(TreeNode root) {
-            if(root==null) return true;
-            boolean ans=same(root.left,root.right);
-            return ans;
+        boolean ans=sameTree(root.left,root.right);
+        return ans;
         
     }
 }
